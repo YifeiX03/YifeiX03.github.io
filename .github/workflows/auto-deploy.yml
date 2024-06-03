@@ -12,5 +12,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: npm install
-      - run: npm run deploy
+      - name: Install and deploy
+        env:
+          MY_NAME: YifeiX03
+        run: |
+          git config --global user.email ${{ secrets.MY_EMAIL }}
+          git config --global user.name $MY_NAME
+          git remote set-url origin https://$MY_NAME:${{ secrets.MY_PASSWORD }}@github.com/YifeiX03/YifeiX03.github.io.git
+          npm install
+          npm run deploy
