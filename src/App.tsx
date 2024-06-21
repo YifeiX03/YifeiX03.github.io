@@ -1,24 +1,32 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
+const now = new Date();
+
+function Hello() {
+  return (
+    <div>
+      <p>Hello World, it is now {now.toString()}</p>
+    </div>
+  );
+}
+
+function Greet(props: any) {
+  return (
+    <div>
+      <p> Hello {props.name}</p>
+    </div>
+  );
+}
+
 function App() {
+  console.log("Hello");
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>Testing</p>
+        <h1>Yippee Epic Website</h1>
+        <Hello />
+        <Greet name="Bob" />
       </header>
     </div>
   );
