@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { useState } from "react";
 
 const now = new Date();
 
@@ -21,12 +22,17 @@ function Greet(props: any) {
 
 function App() {
   console.log("Hello");
+  const [counter, setCounter] = useState(0);
+
+  setTimeout(() => setCounter(counter + 1), 1000);
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Yippee Epic Website</h1>
         <Hello />
         <Greet name="Bob" />
+        <div>{counter}</div>
       </header>
     </div>
   );
