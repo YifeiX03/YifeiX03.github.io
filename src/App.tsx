@@ -82,7 +82,7 @@ const TestApp = () => {
         <Button onClick={setToValue(counter - 1)} text="-1" />
         <Button onClick={setToValue(0)} text="0" />
         <AddForm func={setCounter} amount={counter} />
-        {show == true && <span>Hello there!</span>}
+        {show === true && <span>Hello there!</span>}
         <button onClick={() => setShow(!show)}>Toggle</button>
       </header>
     </div>
@@ -103,8 +103,8 @@ function App() {
   return (
     <div>
       <Navbar setScreen={setScreen} />
-      {screen == 0 && <TestApp />}
-      {screen == 1 && <FunScreen />}
+      {screen === 0 && <TestApp />}
+      {screen === 1 && <FunScreen />}
     </div>
   );
 }
