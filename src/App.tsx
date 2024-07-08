@@ -12,13 +12,13 @@ function Hello() {
   );
 }
 
-function Greet(props: any) {
-  return (
-    <div>
-      <p> Hello {props.name}</p>
-    </div>
-  );
-}
+// function Greet(props: any) {
+//   return (
+//     <div>
+//       <p> Hello {props.name}</p>
+//     </div>
+//   );
+// }
 
 const Display = ({ counter }: any) => <div>{counter}</div>;
 const Button = ({ onClick, text }: any) => (
