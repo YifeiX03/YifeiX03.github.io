@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.Navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3c4b6a;
+}
+
+.Navbar-element {
+  float: left;
+  display: block;
+  padding: 8px;
+}
+
+.Navbar-element:hover {
+  background-color: #2f3b53;
+}
